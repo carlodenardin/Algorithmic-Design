@@ -1,6 +1,9 @@
 from typing import List
 
 """
+TODO:
+Clean and explain the code
+
 Dynamic programming: Matrix chain problem
 
 Example: A1 A2 A3 A4 A5
