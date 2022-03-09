@@ -4,16 +4,9 @@ from typing import List
 TODO:
 Clean and explain the code
 
-Dynamic programming: Matrix chain problem
+DYNAMIC PROGRAMMING: matrix chain multiplication
 
 Example: A1 A2 A3 A4 A5
-
-M:
-0 1 2 3 4
-0 0 1 2 3
-0 0 0 1 2
-0 0 0 0 1
-0 0 0 0 0
 """
 
 def findBreakingPoint(m, s, p, i, j):
@@ -26,11 +19,7 @@ def findBreakingPoint(m, s, p, i, j):
             m[i][j] = q
             s[i][j] = k
 
-def matrixChainMult(p: List[int]):
-    """
-    p is a vector of matrix sizes
-    m: contains the scalar multiplications
-    """
+def matrixChainMul(p: List[int]):
     n = len(p) - 1
     m = [[0 for i in range(n)] for j in range(n)]
     s = [[0 for i in range(n)] for j in range(n)]
@@ -50,8 +39,7 @@ def matrixChainMult(p: List[int]):
 
     return m, s
 
-m, s = matrixChainMult([3, 5, 10, 2, 3])
-
+m, s = matrixChainMul([3, 5, 10, 2, 3])
 
 for i in s:
     print(i)
