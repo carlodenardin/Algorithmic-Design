@@ -1,12 +1,7 @@
 from typing import List
 
 """
-TODO:
-Clean and explain the code
-
 DYNAMIC PROGRAMMING: matrix chain multiplication
-
-Example: A1 A2 A3 A4 A5
 """
 
 def findBreakingPoint(m, s, p, i, j):
@@ -24,13 +19,6 @@ def matrixChainMul(p: List[int]):
     m = [[0 for i in range(n)] for j in range(n)]
     s = [[0 for i in range(n)] for j in range(n)]
 
-    """
-    We can compute m diagonal by diagonal starting from the main
-    diagonal.
-    We don't need to do anything for the main diagonal. It is just 0.
-    """
-
-    # n is the number of matrix that we want to multiply
     for diagonal in range(1, n):
         for i in range(0, n - diagonal):
             j = diagonal + i
